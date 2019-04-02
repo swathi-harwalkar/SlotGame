@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" verbose="1">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LoginTest]">
   <test name="Test">
     <classes>
-      <class name="com.game.base.BaseTestApplication"/>
       <class name="com.game.testcases.runWithSetTestData"/>
     </classes>
   </test> <!-- Test -->
-</suite> <!-- Suite -->
+</suite> <!-- Failed suite [LoginTest] -->

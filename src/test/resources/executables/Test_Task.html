@@ -1,0 +1,315 @@
+<html>
+	<head>
+		<title>Test Task</title>
+		<style>
+			#game {
+				width: 1000px;
+				display: table-cell;
+			}
+			
+			#paytable {
+				display: table-cell;
+			}
+			
+			#slot {
+				border: solid 0px black; 
+				width: 800px; 
+				height: 450px;
+			}
+			
+			.reel {
+				position: absolute;
+				border: solid 1px black; 
+				width: 158px; 
+				height: 450px;
+			}
+			
+			.balance {
+				margin-top: 10px;
+			}
+			
+			.notch {
+				height: 100px;
+				font-size: 70px;
+				padding-top: 40px;
+			}
+			
+			#reel2 {
+				margin-left: 160px;
+				border-left: 0px;
+				border-right: 0px;
+			}
+			
+			#reel3 {
+				margin-left: 320px;
+			}
+			
+			#reel4 {
+				margin-left: 480px;
+				border-left: 0px;
+				border-right: 0px;
+			}
+			
+			#reel5 {
+				margin-left: 640px;
+			}
+			
+			#winbox {
+				padding-top: 20px;
+				color: green;
+				font-weight: bold;
+				font-size: 24;
+				visibility: hidden;
+			}
+			
+			.achievement {
+				font-weight: bold;
+				font-style: italic;
+			}
+			
+			.blinkme {
+				animation: blinker 1s linear infinite;
+				color: green;
+				font-weight: bold;
+			}
+			
+			@keyframes blinker {  
+				50% { opacity: 0; }
+			}
+
+		</style>
+		<script>
+			function getReelset(){
+				return [1, 2, 3, 4, 5];
+			}
+			
+			function getWinCombinations(){
+				return [
+					"111",
+					"1111",
+					"11111",
+					"2222",
+					"22222",
+					"333",
+					"3333",
+					"33333",
+					"444",
+					"44444",
+					"555",
+					"5555"
+				];
+			}
+		
+			function spin(){
+				document.getElementById('balance-value').value--;
+				
+				var reelset = getReelset();
+				for(var i = 1; i <= 5; i++){
+					for(var j = 1; j <= 3; j++){
+						var k = Math.floor((Math.random() * reelset.length) + 0);
+						document.getElementById('reel'+i).getElementsByClassName('notch'+j)[0].innerHTML = reelset[k];
+					}
+				}
+				
+				if(document.getElementById('testdata').value != ''){
+					var data = document.getElementById('testdata').value.split("");
+					for(var i in data){
+						var index = Number(i)+1;
+						document.getElementById('reel'+index).getElementsByClassName('notch2')[0].innerHTML = data[i];
+					}
+				}
+				
+				checkForWin();
+			}
+			
+			function checkForWin(){				
+				var combinations = getWinCombinations();
+				var result1 = '';
+				var result2 = '';
+				var result3 = '';
+				result1 += document.getElementById('reel1').getElementsByClassName('notch2')[0].innerHTML;
+				result1 += document.getElementById('reel2').getElementsByClassName('notch2')[0].innerHTML;
+				result1 += document.getElementById('reel3').getElementsByClassName('notch2')[0].innerHTML;
+				result2 = result1 + document.getElementById('reel4').getElementsByClassName('notch2')[0].innerHTML;
+				result3 = result2 + document.getElementById('reel5').getElementsByClassName('notch2')[0].innerHTML;
+				
+				if(combinations.indexOf(result3) >= 0) return showWin(result3, 5);
+				if(combinations.indexOf(result2) >= 0) return showWin(result2, 4);
+				if(combinations.indexOf(result1) >= 0) return showWin(result1, 3);
+			}
+			
+			function showWin(combination, counter){
+				var win = counter * Number(combination[0]) * 20;
+				document.getElementById('balance-value').value = Number(document.getElementById('balance-value').value) + win;
+				
+				console.log("You have won " + win + " coins!");
+				
+				document.getElementById('winbox').innerHTML = "Win " + win + " coins";
+				document.getElementById('winbox').style.visibility = 'visible';
+				setTimeout(hideWin, 5000);
+				playBlink(counter);
+				disableSpinButton();
+				addAchievement(combination);
+			}
+			
+			function hideWin(){
+				document.getElementById('winbox').style.visibility = 'hidden';
+				stopBlink();
+				enableSpinButton();
+			}
+			
+			function playBlink(counter){
+				for(var i = 1; i <= counter; i++){
+					document.getElementById('reel'+i).getElementsByClassName('notch2')[0].className += ' blinkme';
+				}
+			}
+			
+			function addAchievement(combination){
+				document.getElementsByClassName('win'+combination)[0].className += ' achievement';
+			}
+			
+			function stopBlink() {
+				var notches = document.getElementsByClassName('blinkme');
+				console.log(notches);
+				for(var i = notches.length-1; i >= 0; i--){
+					console.log(i);
+					notches[i].classList.remove('blinkme');
+				}
+			}
+			
+			function disableSpinButton(){
+				document.getElementById('spinButton').disabled = true;
+			}
+			
+			function enableSpinButton() {
+				document.getElementById('spinButton').disabled = false;
+			}
+		</script>
+	<body>
+		<div id="game">
+			<center>
+				<div style="margin-top: 10%">
+					<h3>QA Automation Engineer Test Task</h3>
+					<div id="slot">
+						<div id="reel1" class="reel">
+							<div class="notch notch1"></div>
+							<div class="notch notch2"></div>
+							<div class="notch notch3"></div>
+						</div>
+						<div id="reel2" class="reel">
+							<div class="notch notch1"></div>
+							<div class="notch notch2"></div>
+							<div class="notch notch3"></div>
+						</div>
+						<div id="reel3" class="reel">
+							<div class="notch notch1"></div>
+							<div class="notch notch2"></div>
+							<div class="notch notch3"></div>
+						</div>
+						<div id="reel4" class="reel">
+							<div class="notch notch1"></div>
+							<div class="notch notch2"></div>
+							<div class="notch notch3"></div>
+						</div>
+						<div id="reel5" class="reel">
+							<div class="notch notch1"></div>
+							<div class="notch notch2"></div>
+							<div class="notch notch3"></div>
+						</div>
+					</div>
+					<span class="balance balance-label">Current balance: </span>
+					<input class="balance balance-value" id="balance-value" type="number" placeholder="Your balance" value="1000" />
+					<input id="spinButton" type="button" value="Spin (1 coin)" onclick="spin()" />
+					<div id="winbox">Win 240 coins</div>
+				</div>
+				<div>
+					<label for="testdata">Set test data: </label>
+					<input type="text" name="testdata" id="testdata" placeholder="E.g 111 or 4444" />
+				</div>
+			</center>
+		</div>
+		<div id="paytable">
+			<center>
+				<div>
+					<h4>Paytable</h4>
+					<table style="text-align: center">
+						<thead>
+							<td>Combination</td>
+							<td>Win</td>
+						</thead>
+						<tbody>
+							<tr class="win111">
+								<td>1 + 1 + 1</td>
+								<td>60</td>
+							</tr>
+							<tr class="win1111">
+								<td>1 + 1 + 1 + 1</td>
+								<td>80</td>
+							</tr>
+							<tr class="win11111">
+								<td>1 + 1 + 1 + 1 + 1</td>
+								<td>100</td>
+							</tr>
+							<tr class="win222">
+								<td>2 + 2 + 2</td>
+								<td>120</td>
+							</tr>
+							<tr class="win2222">
+								<td>2 + 2 + 2 + 2</td>
+								<td>160</td>
+							</tr>
+							<tr class="win22222">
+								<td>2 + 2 + 2 + 2 + 2</td>
+								<td>200</td>
+							</tr>
+							<tr class="win333">
+								<td>3 + 3 + 3</td>
+								<td>180</td>
+							</tr>
+							<tr class="win3333">
+								<td>3 + 3 + 3 + 3</td>
+								<td>240</td>
+							</tr>
+							<tr class="win33333">
+								<td>3 + 3 + 3 + 3 + 3</td>
+								<td>300</td>
+							</tr>
+							<tr class="win444">
+								<td>4 + 4 + 4</td>
+								<td>240</td>
+							</tr>
+							<tr class="win4444">
+								<td>4 + 4 + 4 + 4</td>
+								<td>320</td>
+							</tr>
+							<tr class="win44444">
+								<td>4 + 4 + 4 + 4 + 4</td>
+								<td>400</td>
+							</tr>
+							<tr class="win555">
+								<td>5 + 5 + 5</td>
+								<td>300</td>
+							</tr>
+							<tr class="win5555">
+								<td>5 + 5 + 5 + 5</td>
+								<td>400</td>
+							</tr>
+							<tr class="win55555">
+								<td>5 + 5 + 5 + 5 + 5</td>
+								<td>500</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+					<h4>Game description</h4>
+					<span style="color: gray;">
+					This is a simple slot game with one payline. Press Spin button to play.<br />
+					In order to win, you must get 3, 4 or 5 identical symbols in the middle row.<br />
+					Your task is to automate as many test cases as you can think of.
+					</span>
+				</div>
+			</center>
+		</div>
+	</body>
+</html>
