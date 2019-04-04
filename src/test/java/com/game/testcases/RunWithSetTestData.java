@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import com.game.base.BaseTestApplication;
 import com.game.uitilities.DataRead;
 
-public class runWithSetTestData extends BaseTestApplication{
+public class RunWithSetTestData extends BaseTestApplication{
 	
 	/*@BeforeTest
 	public void getTestData(){
@@ -43,17 +43,18 @@ public class runWithSetTestData extends BaseTestApplication{
 		
 	}
 	
-	@AfterMethod
-	public void captureCurrentBalance(){
-		//int balance = Integer.parseInt(driver.findElement(By.xpath(OR.getProperty("balanceTextBox"))).getText());
-		System.out.println("Current balance is"+driver.findElement(By.xpath(OR.getProperty("balanceTextBox"))).getAttribute("value"));
+
+	
+	@Test
+	
+	public void clickUntilWin(){
+		while(!(driver.findElement(By.id("winbox")).isDisplayed())){
+			driver.findElement(By.id("spinButton")).click();
+		}
+		System.out.println(driver.findElement(By.id("winbox")).getText());
 	}
 	
-	/*@AfterMethod
-	public void captureCurrentBalance(){
-		int balance = Integer.parseInt(driver.findElement(By.xpath(OR.getProperty("balanceTextBox"))).getText());
-		System.out.println("Current balance is"+balance);
-	}*/
+	
 	
 
 }

@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -76,4 +78,51 @@ public class BaseTestApplication {
 		
 	}
 	
-}
+	public int[][] slotNumbers(){
+		
+		int[][] numbers= new int[3][5];
+		
+		int i;
+		int j;
+		
+		try{
+		 for(i=0;i<3;i++){
+			 int I = i+1;
+			 for(j=0;j<5;j++){
+				 int J = j+1;
+				 numbers[i][j]=Integer.parseInt(driver.findElement(By.xpath("//*[@id='reel"+J+"']/div["+I+"]")).getText());
+				 
+				 
+			 }
+		 }
+		}catch(NumberFormatException nfe){
+			System.out.println("Error: Slot has empty or non-numeric values");
+		}
+		 
+		//To Print all numbers in slot
+		 /*for(i=0;i<3;i++){
+			 for(j=0;j<5;j++){
+				 System.out.print(numbers[i][j]);
+				 System.out.print(" ");
+			 }
+			 System.out.println("");
+			 
+		 }*/
+		 
+		 return numbers;
+
+		}
+	
+	
+
+	public static int captureCurrentBalance(){
+		//int balance = Integer.parseInt(driver.findElement(By.xpath(OR.getProperty("balanceTextBox"))).getText());
+		int balance = Integer.parseInt(driver.findElement(By.id(OR.getProperty("balanceTextBox"))).getAttribute("value"));
+		return balance;
+	}	
+		
+		
+		  
+	}
+	
+
