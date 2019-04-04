@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -34,8 +35,11 @@ public class runWithSetTestData extends BaseTestApplication{
 	@Test
 	public void setDataSpin() {
 		
+		String s = driver.findElement(By.xpath(OR.getProperty("reel1_notch2"))).getText();
+		Assert.assertEquals(s, "");
 		driver.findElement(By.xpath(OR.getProperty("spinButton"))).click();
-		
+		String s1 = driver.findElement(By.xpath(OR.getProperty("reel1_notch2"))).getText();
+		Assert.assertEquals(s1, "");
 		
 	}
 	

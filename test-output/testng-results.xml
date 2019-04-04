@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginTest" duration-ms="324" started-at="2019-04-02T19:45:52Z" finished-at="2019-04-02T19:45:52Z">
+  <suite name="LoginTest" duration-ms="395" started-at="2019-04-03T06:38:35Z" finished-at="2019-04-03T06:38:36Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="324" started-at="2019-04-02T19:45:52Z" finished-at="2019-04-02T19:45:52Z">
+    <test name="Test" duration-ms="395" started-at="2019-04-03T06:38:35Z" finished-at="2019-04-03T06:38:36Z">
       <class name="com.game.testcases.runWithSetTestData">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="setUp" is-config="true" duration-ms="14446" started-at="2019-04-02T22:45:38Z" finished-at="2019-04-02T22:45:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="setUp" is-config="true" duration-ms="18161" started-at="2019-04-03T09:38:17Z" finished-at="2019-04-03T09:38:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setDataSpin()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="setDataSpin" duration-ms="231" started-at="2019-04-02T22:45:52Z" finished-at="2019-04-02T22:45:52Z">
+        <test-method status="PASS" signature="setDataSpin()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="setDataSpin" duration-ms="319" started-at="2019-04-03T09:38:35Z" finished-at="2019-04-03T09:38:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDataSpin -->
-        <test-method status="PASS" signature="captureCurrentBalance()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="captureCurrentBalance" is-config="true" duration-ms="71" started-at="2019-04-02T22:45:52Z" finished-at="2019-04-02T22:45:52Z">
+        <test-method status="PASS" signature="captureCurrentBalance()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="captureCurrentBalance" is-config="true" duration-ms="52" started-at="2019-04-03T09:38:36Z" finished-at="2019-04-03T09:38:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureCurrentBalance -->
