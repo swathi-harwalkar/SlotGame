@@ -6,14 +6,4 @@
       <class name="com.game.testcases.RunWithSetTestData"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.game.testcases.RunWithSetTestData">
-        <methods>
-          <include name="setDataWin" invocation-numbers="3 10 14"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.game.testcases.RunWithSetTestData -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
