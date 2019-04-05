@@ -45,9 +45,9 @@ public class Rough extends BaseTestApplication {
 		map.put("44400", 240);
 		map.put("44440", 320);
 		map.put("44444", 400);
-		map.put("44400", 240);
-		map.put("44440", 320);
-		map.put("44444", 400);
+		map.put("55500", 300);
+		map.put("55550", 400);
+		map.put("55555", 500);
 
 		// Loop
 		int i=0;
@@ -66,6 +66,7 @@ public class Rough extends BaseTestApplication {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("winbox")));
 			}catch(TimeoutException te){
 				System.out.println("Win Message is not displayed for combination" +combination);
+				continue;
 			}
 			String winText = driver.findElement(By.id("winbox")).getText();
 			String[] split = winText.split("\\s+");

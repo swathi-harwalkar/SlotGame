@@ -1,25 +1,372 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="3" total="15" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginTest" duration-ms="395" started-at="2019-04-03T06:38:35Z" finished-at="2019-04-03T06:38:36Z">
+  <suite name="Default suite" duration-ms="84004" started-at="2019-04-05T16:10:37Z" finished-at="2019-04-05T16:12:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="395" started-at="2019-04-03T06:38:35Z" finished-at="2019-04-03T06:38:36Z">
-      <class name="com.game.testcases.runWithSetTestData">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="setUp" is-config="true" duration-ms="18161" started-at="2019-04-03T09:38:17Z" finished-at="2019-04-03T09:38:35Z">
+    <test name="Default test" duration-ms="84004" started-at="2019-04-05T16:10:37Z" finished-at="2019-04-05T16:12:01Z">
+      <class name="com.game.testcases.RunWithSetTestData">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setUp" is-config="true" duration-ms="6813" started-at="2019-04-05T19:10:30Z" finished-at="2019-04-05T19:10:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setDataSpin()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="setDataSpin" duration-ms="319" started-at="2019-04-03T09:38:35Z" finished-at="2019-04-03T09:38:36Z">
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5607" started-at="2019-04-05T19:10:37Z" data-provider="paytable" finished-at="2019-04-05T19:10:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setDataSpin -->
-        <test-method status="PASS" signature="captureCurrentBalance()[pri:0, instance:com.game.testcases.runWithSetTestData@6e8dacdf]" name="captureCurrentBalance" is-config="true" duration-ms="52" started-at="2019-04-03T09:38:36Z" finished-at="2019-04-03T09:38:36Z">
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5433" started-at="2019-04-05T19:10:43Z" data-provider="paytable" finished-at="2019-04-05T19:10:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11110]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[80]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- captureCurrentBalance -->
-      </class> <!-- com.game.testcases.runWithSetTestData -->
-    </test> <!-- Test -->
-  </suite> <!-- LoginTest -->
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5713" started-at="2019-04-05T19:10:48Z" data-provider="paytable" finished-at="2019-04-05T19:10:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11111]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="FAIL" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="10665" started-at="2019-04-05T19:10:54Z" data-provider="paytable" finished-at="2019-04-05T19:11:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22200]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[120]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Win Message is not displayed for combination22200]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Win Message is not displayed for combination22200
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.game.testcases.RunWithSetTestData.setDataWin(RunWithSetTestData.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5758" started-at="2019-04-05T19:11:04Z" data-provider="paytable" finished-at="2019-04-05T19:11:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22220]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[160]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5680" started-at="2019-04-05T19:11:10Z" data-provider="paytable" finished-at="2019-04-05T19:11:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22222]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5720" started-at="2019-04-05T19:11:16Z" data-provider="paytable" finished-at="2019-04-05T19:11:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[33300]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[180]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5681" started-at="2019-04-05T19:11:22Z" data-provider="paytable" finished-at="2019-04-05T19:11:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[33330]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[240]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5629" started-at="2019-04-05T19:11:27Z" data-provider="paytable" finished-at="2019-04-05T19:11:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[33333]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[300]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5630" started-at="2019-04-05T19:11:33Z" data-provider="paytable" finished-at="2019-04-05T19:11:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[44400]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[240]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="FAIL" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="348" started-at="2019-04-05T19:11:38Z" data-provider="paytable" finished-at="2019-04-05T19:11:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[44440]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[320]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [320] but found [240]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [320] but found [240]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.game.testcases.RunWithSetTestData.setDataWin(RunWithSetTestData.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="10423" started-at="2019-04-05T19:11:39Z" data-provider="paytable" finished-at="2019-04-05T19:11:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[44444]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[400]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5698" started-at="2019-04-05T19:11:49Z" data-provider="paytable" finished-at="2019-04-05T19:11:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[55500]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[300]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="PASS" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="5674" started-at="2019-04-05T19:11:55Z" data-provider="paytable" finished-at="2019-04-05T19:12:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[55550]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[400]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+        <test-method status="FAIL" signature="setDataWin(java.lang.String, int)[pri:0, instance:com.game.testcases.RunWithSetTestData@3f3afe78]" name="setDataWin" duration-ms="316" started-at="2019-04-05T19:12:01Z" data-provider="paytable" finished-at="2019-04-05T19:12:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[55555]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [500] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [500] but found [400]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at com.game.testcases.RunWithSetTestData.setDataWin(RunWithSetTestData.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDataWin -->
+      </class> <!-- com.game.testcases.RunWithSetTestData -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
