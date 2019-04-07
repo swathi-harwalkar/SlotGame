@@ -4,16 +4,23 @@
   <test name="Test">
     <classes>
       <class name="com.game.base.BaseTestApplication"/>
-      <class name="com.game.testcases.runWithSetTestData"/>
+      <class name="com.game.testcases.RunWithSetTestData"/>
     </classes>
   </test> <!-- Test -->
   <test name="Test(failed)">
     <classes>
-      <class name="com.game.testcases.runWithSetTestData">
+      <class name="com.game.testcases.RunWithSetTestData">
         <methods>
-          <include name="setDataSpin"/>
+          <include name="setDataWin" invocation-numbers="3 10 14"/>
+          <include name="wonCombinationHighlight" invocation-numbers="3 10 14"/>
         </methods>
-      </class> <!-- com.game.testcases.runWithSetTestData -->
+      </class> <!-- com.game.testcases.RunWithSetTestData -->
+      <class name="com.game.base.BaseTestApplication">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.game.base.BaseTestApplication -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

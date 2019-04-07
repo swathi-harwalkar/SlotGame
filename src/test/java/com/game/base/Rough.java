@@ -28,13 +28,16 @@ public class Rough extends BaseTestApplication {
 		driver.get("C:/Users/swathi/Test/Test_Task.html");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-		driver.findElement(By.id("spinButton")).click();
-//System.out.print(System.getProperty("user.dir")+ "\\src\\test\\resources\\executables\\Test_Task.html");
-System.out.println(driver.findElement(By.className("win3333")).getCssValue("font-style"));
-driver.findElement(By.id("testdata")).sendKeys("33330");
-driver.findElement(By.id("spinButton")).click();
-System.out.println(driver.findElement(By.className("win3333")).getCssValue("font-style"));
 
-}
+		driver.findElement(By.id("spinButton")).click();
+		// System.out.print(System.getProperty("user.dir")+
+		// "\\src\\test\\resources\\executables\\Test_Task.html");
+		System.out.println(driver.findElement(By.className("win3333"))
+				.getCssValue("font-style"));
+		driver.findElement(By.id("testdata")).sendKeys("33330");
+		driver.findElement(By.id("spinButton")).click();
+		System.out.println(driver.findElement(By.className("win3333"))
+				.getCssValue("font-style"));
+
+	}
 }

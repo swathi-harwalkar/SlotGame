@@ -1,27 +1,448 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="3" total="15" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginTest" duration-ms="988" started-at="2019-04-06T23:32:50Z" finished-at="2019-04-06T23:32:51Z">
+  <suite name="LoginTest" duration-ms="3556" started-at="2019-04-07T15:57:25Z" finished-at="2019-04-07T15:57:29Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="988" started-at="2019-04-06T23:32:50Z" finished-at="2019-04-06T23:32:51Z">
+    <test name="Test" duration-ms="3556" started-at="2019-04-07T15:57:25Z" finished-at="2019-04-07T15:57:29Z">
       <class name="com.game.testcases.RunWithSetTestData">
-        <test-method status="PASS" signature="verifyPageElementPresence()[pri:1, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="verifyPageElementPresence" duration-ms="506" started-at="2019-04-07T02:32:50Z" finished-at="2019-04-07T02:32:50Z">
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="385" started-at="2019-04-07T18:57:25Z" data-provider="paytable" finished-at="2019-04-07T18:57:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win111]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPageElementPresence -->
-        <test-method status="PASS" signature="wonCombinationHighlight()[pri:4, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="466" started-at="2019-04-07T02:32:50Z" finished-at="2019-04-07T02:32:51Z">
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="222" started-at="2019-04-07T18:57:25Z" data-provider="paytable" finished-at="2019-04-07T18:57:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11110]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[80]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win1111]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="233" started-at="2019-04-07T18:57:26Z" data-provider="paytable" finished-at="2019-04-07T18:57:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11111]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win11111]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="FAIL" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="253" started-at="2019-04-07T18:57:26Z" data-provider="paytable" finished-at="2019-04-07T18:57:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22200]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[120]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win222]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.game.testcases.RunWithSetTestData.wonCombinationHighlight(RunWithSetTestData.java:178)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="206" started-at="2019-04-07T18:57:26Z" data-provider="paytable" finished-at="2019-04-07T18:57:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22220]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[160]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win2222]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="209" started-at="2019-04-07T18:57:26Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22222]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win22222]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="225" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[33300]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[180]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win333]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="227" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[33330]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[240]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win3333]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="212" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[33333]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[300]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win33333]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="198" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[44400]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[240]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win444]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="FAIL" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="204" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[44440]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[320]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win4444]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.game.testcases.RunWithSetTestData.wonCombinationHighlight(RunWithSetTestData.java:178)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="198" started-at="2019-04-07T18:57:28Z" data-provider="paytable" finished-at="2019-04-07T18:57:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[44444]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[400]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win44444]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="261" started-at="2019-04-07T18:57:28Z" data-provider="paytable" finished-at="2019-04-07T18:57:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[55500]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[300]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win555]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="249" started-at="2019-04-07T18:57:28Z" data-provider="paytable" finished-at="2019-04-07T18:57:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[55550]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[400]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win5555]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
+        <test-method status="FAIL" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="218" started-at="2019-04-07T18:57:28Z" data-provider="paytable" finished-at="2019-04-07T18:57:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[55555]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[win55555]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.game.testcases.RunWithSetTestData.wonCombinationHighlight(RunWithSetTestData.java:178)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wonCombinationHighlight -->
       </class> <!-- com.game.testcases.RunWithSetTestData -->
       <class name="com.game.base.BaseTestApplication">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.base.BaseTestApplication@39ba5a14]" name="setUp" is-config="true" duration-ms="13952" started-at="2019-04-07T02:32:36Z" finished-at="2019-04-07T02:32:50Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.base.BaseTestApplication@39ba5a14]" name="setUp" is-config="true" duration-ms="8900" started-at="2019-04-07T18:57:16Z" finished-at="2019-04-07T18:57:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.game.base.BaseTestApplication@39ba5a14]" name="tearDown" is-config="true" duration-ms="3727" started-at="2019-04-07T02:32:51Z" finished-at="2019-04-07T02:32:55Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.game.base.BaseTestApplication@39ba5a14]" name="tearDown" is-config="true" duration-ms="1177" started-at="2019-04-07T18:57:29Z" finished-at="2019-04-07T18:57:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

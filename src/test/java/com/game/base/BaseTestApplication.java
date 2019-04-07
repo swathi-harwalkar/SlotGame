@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -26,6 +27,7 @@ public class BaseTestApplication {
 	public static Properties Config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
+	public static WebDriverWait wait;
 
 	@BeforeSuite
 	public void setUp() {
@@ -58,34 +60,33 @@ public class BaseTestApplication {
 				e.printStackTrace();
 			}
 
-			if(Config.getProperty("browser").equals("chrome")){
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-			driver.get(System.getProperty("user.dir")
-					+ "\\src\\test\\resources\\executables\\Test_Task.html");
-			
-			}else if(Config.getProperty("browser").equals("firefox")){
+			if (Config.getProperty("browser").equals("chrome")) {
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				driver.get(System.getProperty("user.dir")
+						+ "\\src\\test\\resources\\executables\\Test_Task.html");
+
+			} else if (Config.getProperty("browser").equals("firefox")) {
 				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 				driver.get(Config.getProperty("testURL"));
-				
-			}else if(Config.getProperty("browser").equals("ie")){
+
+			} else if (Config.getProperty("browser").equals("edge")) {
 				WebDriverManager.edgedriver().setup();
 				driver = new EdgeDriver();
 				driver.get(System.getProperty("user.dir")
 						+ "\\src\\test\\resources\\executables\\Test_Task.html");
 			}
-				
-			//Or can get the path from config properties
-			//driver.get(Config.getProperty("testURL"));
+
+			// Or can get the path from config properties
+			// driver.get(Config.getProperty("testURL"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicitWait")), TimeUnit.SECONDS);
+			wait = new WebDriverWait(driver, Integer.parseInt(Config.getProperty("explicitWait")));
 
 		}
 
 	}
-
-	
 
 	public int[][] slotNumbers() {
 
@@ -136,19 +137,18 @@ public class BaseTestApplication {
 
 	public static boolean isWin() {
 
-		return driver.findElement(By.id(OR.getProperty("winMessage"))).isDisplayed();
+		return driver.findElement(By.id(OR.getProperty("winMessage")))
+				.isDisplayed();
 
 	}
-	
+
 	@AfterSuite
-		public void tearDown() {
+	public void tearDown() {
 
-			if (driver != null) {
-				driver.quit();
-			}
-
+		if (driver != null) {
+			driver.quit();
 		}
 
+	}
 
 }
-
