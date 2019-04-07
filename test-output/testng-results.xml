@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="350" started-at="2019-04-05T19:43:04Z" finished-at="2019-04-05T19:43:04Z">
+  <suite name="LoginTest" duration-ms="988" started-at="2019-04-06T23:32:50Z" finished-at="2019-04-06T23:32:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="350" started-at="2019-04-05T19:43:04Z" finished-at="2019-04-05T19:43:04Z">
+    <test name="Test" duration-ms="988" started-at="2019-04-06T23:32:50Z" finished-at="2019-04-06T23:32:51Z">
       <class name="com.game.testcases.RunWithSetTestData">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.testcases.RunWithSetTestData@1e643faf]" name="setUp" is-config="true" duration-ms="13883" started-at="2019-04-05T22:42:50Z" finished-at="2019-04-05T22:43:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyPageElementPresence()[pri:0, instance:com.game.testcases.RunWithSetTestData@1e643faf]" name="verifyPageElementPresence" duration-ms="332" started-at="2019-04-05T22:43:04Z" finished-at="2019-04-05T22:43:04Z">
+        <test-method status="PASS" signature="verifyPageElementPresence()[pri:1, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="verifyPageElementPresence" duration-ms="506" started-at="2019-04-07T02:32:50Z" finished-at="2019-04-07T02:32:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPageElementPresence -->
+        <test-method status="PASS" signature="wonCombinationHighlight()[pri:4, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="466" started-at="2019-04-07T02:32:50Z" finished-at="2019-04-07T02:32:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wonCombinationHighlight -->
       </class> <!-- com.game.testcases.RunWithSetTestData -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.game.base.BaseTestApplication">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.base.BaseTestApplication@39ba5a14]" name="setUp" is-config="true" duration-ms="13952" started-at="2019-04-07T02:32:36Z" finished-at="2019-04-07T02:32:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.game.base.BaseTestApplication@39ba5a14]" name="tearDown" is-config="true" duration-ms="3727" started-at="2019-04-07T02:32:51Z" finished-at="2019-04-07T02:32:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.game.base.BaseTestApplication -->
+    </test> <!-- Test -->
+  </suite> <!-- LoginTest -->
 </testng-results>

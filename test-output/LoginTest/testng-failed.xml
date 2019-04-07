@@ -3,7 +3,8 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [LoginTest]">
   <test name="Test">
     <classes>
-      <class name="com.game.testcases.runWithSetTestData"/>
+      <class name="com.game.base.BaseTestApplication"/>
+      <class name="com.game.testcases.RunWithSetTestData"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Failed suite [LoginTest] -->

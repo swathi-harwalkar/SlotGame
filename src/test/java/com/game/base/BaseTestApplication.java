@@ -1,27 +1,26 @@
 package com.game.base;
 
-import java.io.BufferedReader;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTestApplication {
 
-	// initialising webdriver, testdata read etc
+	// initialising webdriver, reading properties and common methods
 
 	public static WebDriver driver;
 	public static Properties Config = new Properties();
@@ -59,12 +58,26 @@ public class BaseTestApplication {
 				e.printStackTrace();
 			}
 
-			System.setProperty(
-					"webdriver.chrome.driver",
-					"C:\\Users\\swathi\\workspace\\SlotGame\\SlotGame\\src\\test\\resources\\executables\\chromedriver.exe");
+			if(Config.getProperty("browser").equals("chrome")){
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-			// driver.get(Config.getProperty("testURL"));
-			driver.get("C:/Users/swathi/Test/Test_Task.html");
+			driver.get(System.getProperty("user.dir")
+					+ "\\src\\test\\resources\\executables\\Test_Task.html");
+			
+			}else if(Config.getProperty("browser").equals("firefox")){
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				driver.get(Config.getProperty("testURL"));
+				
+			}else if(Config.getProperty("browser").equals("ie")){
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
+				driver.get(System.getProperty("user.dir")
+						+ "\\src\\test\\resources\\executables\\Test_Task.html");
+			}
+				
+			//Or can get the path from config properties
+			//driver.get(Config.getProperty("testURL"));
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
@@ -72,14 +85,7 @@ public class BaseTestApplication {
 
 	}
 
-	// @AfterSuite
-	public void tearDown() {
-
-		if (driver != null) {
-			driver.quit();
-		}
-
-	}
+	
 
 	public int[][] slotNumbers() {
 
@@ -101,7 +107,7 @@ public class BaseTestApplication {
 				}
 			}
 		} catch (NumberFormatException nfe) {
-			
+
 			Assert.fail("Error: Slot has empty or non-numeric values");
 		}
 
@@ -117,7 +123,7 @@ public class BaseTestApplication {
 
 	}
 
-	public static int captureCurrentBalance() {
+	public int captureCurrentBalance() {
 
 		int balance = Integer.parseInt(driver.findElement(
 				By.id(OR.getProperty("balanceTextBox"))).getAttribute("value"));
@@ -125,13 +131,24 @@ public class BaseTestApplication {
 	}
 
 	public void spin() {
-		driver.findElement(By.id("spinButton")).click();
-	}
-	
-	public static boolean isWin(){
-		
-		return driver.findElement(By.id("winbox")).isDisplayed();
-		
+		driver.findElement(By.id(OR.getProperty("spinButton"))).click();
 	}
 
+	public static boolean isWin() {
+
+		return driver.findElement(By.id(OR.getProperty("winMessage"))).isDisplayed();
+
+	}
+	
+	@AfterSuite
+		public void tearDown() {
+
+			if (driver != null) {
+				driver.quit();
+			}
+
+		}
+
+
 }
+
