@@ -3,9 +3,9 @@ package com.game.testcases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -13,31 +13,30 @@ import com.game.base.BaseTestApplication;
 
 public class RunWithSetTestData extends BaseTestApplication {
 	
+	static final Logger log = LoggerFactory.getLogger(RunWithSetTestData.class);
 	
-	
-
 	@Test(priority = 1, enabled = false)
 	public void verifyPageElementPresence() {
 
-		Assert.assertTrue((driver.getTitle()).equals(OR
+		Assert.assertTrue((driver.getTitle()).equals(ElementConfig
 				.getProperty("pageTitle")));
-		Assert.assertTrue(driver.findElement(By.id(OR.getProperty("slot")))
+		Assert.assertTrue(driver.findElement(By.id(ElementConfig.getProperty("slot")))
 				.isDisplayed());
 		Assert.assertTrue(driver.findElement(
-				By.id(OR.getProperty("balanceTextBox"))).isDisplayed());
+				By.id(ElementConfig.getProperty("balanceTextBox"))).isDisplayed());
 		Assert.assertTrue(driver.findElement(
-				By.id(OR.getProperty("setTestDataInputBox"))).isDisplayed());
+				By.id(ElementConfig.getProperty("setTestDataInputBox"))).isDisplayed());
 
 		Assert.assertTrue(driver.findElement(
-				By.id(OR.getProperty("payTableLookup"))).isDisplayed());
+				By.id(ElementConfig.getProperty("payTableLookup"))).isDisplayed());
 		Assert.assertTrue(driver.findElement(
-				By.id(OR.getProperty("spinButton"))).isDisplayed());
+				By.id(ElementConfig.getProperty("spinButton"))).isDisplayed());
 
 	}
 
 	@Test(priority = 2, enabled = false)
 	public void spinDecrementsBalance() {
-		driver.findElement(By.id(OR.getProperty("setTestDataInputBox")))
+		driver.findElement(By.id(ElementConfig.getProperty("setTestDataInputBox")))
 				.clear();
 		int balance = captureCurrentBalance();
 		spin();
@@ -68,7 +67,7 @@ public class RunWithSetTestData extends BaseTestApplication {
 		// capturing initial balance
 		int balance = captureCurrentBalance();
 
-		while (!(driver.findElement(By.id(OR.getProperty("winMessage")))
+		while (!(driver.findElement(By.id(ElementConfig.getProperty("winMessage")))
 				.isDisplayed())) {
 			spin();
 		}
@@ -83,9 +82,9 @@ public class RunWithSetTestData extends BaseTestApplication {
 	public void setDataWin(String combination, int win,String winCss) {
 
 
-		driver.findElement(By.id(OR.getProperty("setTestDataInputBox")))
+		driver.findElement(By.id(ElementConfig.getProperty("setTestDataInputBox")))
 				.clear();
-		driver.findElement(By.id(OR.getProperty("setTestDataInputBox")))
+		driver.findElement(By.id(ElementConfig.getProperty("setTestDataInputBox")))
 				.sendKeys(combination);
 
 		int balance = Integer.parseInt(driver.findElement(
@@ -102,13 +101,15 @@ public class RunWithSetTestData extends BaseTestApplication {
 
 			Assert.fail("Win Message is not displayed for combination"
 					+ combination);
+			log.error("Win Message is not displayed for combination"
+					+ combination);
 		}
 		String winText = driver
-				.findElement(By.id(OR.getProperty("winMessage"))).getText();
+				.findElement(By.id(ElementConfig.getProperty("winMessage"))).getText();
 		String[] split = winText.split("\\s+");
 		int winDisplay = Integer.parseInt(split[1]);
 		int balanceNew = Integer.parseInt(driver.findElement(
-				By.id(OR.getProperty("balanceTextBox"))).getAttribute("value"));
+				By.id(ElementConfig.getProperty("balanceTextBox"))).getAttribute("value"));
 
 		int excpectedBalance = (balance - 1) + win;
 		Assert.assertEquals(winDisplay, win);
@@ -151,32 +152,23 @@ public class RunWithSetTestData extends BaseTestApplication {
 
 	}
 	
-	/*@Test(priority = 6, enabled = true)
-	public void wonCombinationHighlight() {
-
-		driver.findElement(By.id(OR.getProperty("setTestDataInputBox")))
-				.clear();
-		driver.findElement(By.id(OR.getProperty("setTestDataInputBox")))
-				.sendKeys("33330");
-		spin();
-
-		Assert.assertTrue((driver.findElement(By.className("win3333"))
-				.getCssValue("font-style")).equals("italic"));
-
-	}
-*/
-	@Test(priority = 6,dataProvider = "paytable", enabled = true, dependsOnMethods={"setDataWin"}, alwaysRun=true)
-	public void wonCombinationHighlight(String combination, int win,String winCss) {
+	
+	@Test(priority = 6,dataProvider = "paytable", enabled = true, alwaysRun=true)
+	public void paytableWinHighlight(String combination, int win,String winCss) {
 		driver.navigate().refresh();
 
-		driver.findElement(By.id(OR.getProperty("setTestDataInputBox")))
+		driver.findElement(By.id(ElementConfig.getProperty("setTestDataInputBox")))
 				.clear();
-		driver.findElement(By.id(OR.getProperty("setTestDataInputBox")))
+		driver.findElement(By.id(ElementConfig.getProperty("setTestDataInputBox")))
 				.sendKeys(combination);
 		spin();
+		
+		String fontStyle = (driver.findElement(By.className(winCss))
+				.getCssValue("font-style"));
+		String fontWeight = (driver.findElement(By.className(winCss))
+				.getCssValue("font-weight"));		
 
-		Assert.assertTrue((driver.findElement(By.className(winCss))
-				.getCssValue("font-style")).equals("italic"));
+		Assert.assertTrue(fontStyle.equals("italic")&&fontWeight.equals("700"));
 		
 
 	}

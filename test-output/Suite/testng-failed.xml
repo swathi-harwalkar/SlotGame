@@ -11,14 +11,12 @@
     <classes>
       <class name="com.game.testcases.RunWithSetTestData">
         <methods>
-          <include name="setDataWin" invocation-numbers="3 10 14"/>
-          <include name="wonCombinationHighlight" invocation-numbers="3 10 14"/>
+          <include name="paytableWinHighlight"/>
         </methods>
       </class> <!-- com.game.testcases.RunWithSetTestData -->
       <class name="com.game.base.BaseTestApplication">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- com.game.base.BaseTestApplication -->
     </classes>

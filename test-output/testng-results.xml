@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="3" total="15" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginTest" duration-ms="3556" started-at="2019-04-07T15:57:25Z" finished-at="2019-04-07T15:57:29Z">
+  <suite name="LoginTest" duration-ms="4063" started-at="2019-04-08T09:43:42Z" finished-at="2019-04-08T09:43:46Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="3556" started-at="2019-04-07T15:57:25Z" finished-at="2019-04-07T15:57:29Z">
+    <test name="Test" duration-ms="4063" started-at="2019-04-08T09:43:42Z" finished-at="2019-04-08T09:43:46Z">
       <class name="com.game.testcases.RunWithSetTestData">
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="385" started-at="2019-04-07T18:57:25Z" data-provider="paytable" finished-at="2019-04-07T18:57:25Z">
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="329" started-at="2019-04-08T12:43:42Z" data-provider="paytable" finished-at="2019-04-08T12:43:42Z">
           <params>
             <param index="0">
               <value>
@@ -27,8 +27,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="222" started-at="2019-04-07T18:57:25Z" data-provider="paytable" finished-at="2019-04-07T18:57:26Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="282" started-at="2019-04-08T12:43:42Z" data-provider="paytable" finished-at="2019-04-08T12:43:43Z">
           <params>
             <param index="0">
               <value>
@@ -48,8 +48,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="233" started-at="2019-04-07T18:57:26Z" data-provider="paytable" finished-at="2019-04-07T18:57:26Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="272" started-at="2019-04-08T12:43:43Z" data-provider="paytable" finished-at="2019-04-08T12:43:43Z">
           <params>
             <param index="0">
               <value>
@@ -69,8 +69,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="FAIL" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="253" started-at="2019-04-07T18:57:26Z" data-provider="paytable" finished-at="2019-04-07T18:57:26Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="FAIL" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="260" started-at="2019-04-08T12:43:43Z" data-provider="paytable" finished-at="2019-04-08T12:43:43Z">
           <params>
             <param index="0">
               <value>
@@ -98,7 +98,7 @@
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.game.testcases.RunWithSetTestData.wonCombinationHighlight(RunWithSetTestData.java:178)
+	at com.game.testcases.RunWithSetTestData.paytableWinHighlight(RunWithSetTestData.java:171)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -128,8 +128,8 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="206" started-at="2019-04-07T18:57:26Z" data-provider="paytable" finished-at="2019-04-07T18:57:26Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="287" started-at="2019-04-08T12:43:43Z" data-provider="paytable" finished-at="2019-04-08T12:43:43Z">
           <params>
             <param index="0">
               <value>
@@ -149,8 +149,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="209" started-at="2019-04-07T18:57:26Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="393" started-at="2019-04-08T12:43:43Z" data-provider="paytable" finished-at="2019-04-08T12:43:44Z">
           <params>
             <param index="0">
               <value>
@@ -170,8 +170,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="225" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="234" started-at="2019-04-08T12:43:44Z" data-provider="paytable" finished-at="2019-04-08T12:43:44Z">
           <params>
             <param index="0">
               <value>
@@ -191,8 +191,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="227" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="266" started-at="2019-04-08T12:43:44Z" data-provider="paytable" finished-at="2019-04-08T12:43:44Z">
           <params>
             <param index="0">
               <value>
@@ -212,8 +212,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="212" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="234" started-at="2019-04-08T12:43:44Z" data-provider="paytable" finished-at="2019-04-08T12:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -233,8 +233,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="198" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:27Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="234" started-at="2019-04-08T12:43:45Z" data-provider="paytable" finished-at="2019-04-08T12:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -254,8 +254,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="FAIL" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="204" started-at="2019-04-07T18:57:27Z" data-provider="paytable" finished-at="2019-04-07T18:57:28Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="FAIL" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="250" started-at="2019-04-08T12:43:45Z" data-provider="paytable" finished-at="2019-04-08T12:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -283,7 +283,7 @@
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.game.testcases.RunWithSetTestData.wonCombinationHighlight(RunWithSetTestData.java:178)
+	at com.game.testcases.RunWithSetTestData.paytableWinHighlight(RunWithSetTestData.java:171)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -313,8 +313,8 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="198" started-at="2019-04-07T18:57:28Z" data-provider="paytable" finished-at="2019-04-07T18:57:28Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="235" started-at="2019-04-08T12:43:45Z" data-provider="paytable" finished-at="2019-04-08T12:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -334,8 +334,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="261" started-at="2019-04-07T18:57:28Z" data-provider="paytable" finished-at="2019-04-07T18:57:28Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="228" started-at="2019-04-08T12:43:45Z" data-provider="paytable" finished-at="2019-04-08T12:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -355,8 +355,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="PASS" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="249" started-at="2019-04-07T18:57:28Z" data-provider="paytable" finished-at="2019-04-07T18:57:28Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="PASS" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="250" started-at="2019-04-08T12:43:45Z" data-provider="paytable" finished-at="2019-04-08T12:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -376,8 +376,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
-        <test-method status="FAIL" signature="wonCombinationHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@511baa65]" name="wonCombinationHighlight" duration-ms="218" started-at="2019-04-07T18:57:28Z" data-provider="paytable" finished-at="2019-04-07T18:57:29Z">
+        </test-method> <!-- paytableWinHighlight -->
+        <test-method status="FAIL" signature="paytableWinHighlight(java.lang.String, int, java.lang.String)[pri:6, instance:com.game.testcases.RunWithSetTestData@10bbd20a]" name="paytableWinHighlight" duration-ms="219" started-at="2019-04-08T12:43:46Z" data-provider="paytable" finished-at="2019-04-08T12:43:46Z">
           <params>
             <param index="0">
               <value>
@@ -405,7 +405,7 @@
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.game.testcases.RunWithSetTestData.wonCombinationHighlight(RunWithSetTestData.java:178)
+	at com.game.testcases.RunWithSetTestData.paytableWinHighlight(RunWithSetTestData.java:171)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -435,14 +435,14 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wonCombinationHighlight -->
+        </test-method> <!-- paytableWinHighlight -->
       </class> <!-- com.game.testcases.RunWithSetTestData -->
       <class name="com.game.base.BaseTestApplication">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.base.BaseTestApplication@39ba5a14]" name="setUp" is-config="true" duration-ms="8900" started-at="2019-04-07T18:57:16Z" finished-at="2019-04-07T18:57:25Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.game.base.BaseTestApplication@64729b1e]" name="setUp" is-config="true" duration-ms="8364" started-at="2019-04-08T12:43:34Z" finished-at="2019-04-08T12:43:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.game.base.BaseTestApplication@39ba5a14]" name="tearDown" is-config="true" duration-ms="1177" started-at="2019-04-07T18:57:29Z" finished-at="2019-04-07T18:57:30Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.game.base.BaseTestApplication@64729b1e]" name="tearDown" is-config="true" duration-ms="30643" started-at="2019-04-08T12:43:46Z" finished-at="2019-04-08T12:44:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

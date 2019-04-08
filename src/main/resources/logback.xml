@@ -1,0 +1,19 @@
+<configuration>
+
+	<property name="HOME_LOG" value="app.log" />
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>${HOME_LOG}</file>
+
+		<encoder>
+			<pattern>%d %p %c{1.} [%t] %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.game" level="debug" additivity="false">
+		<appender-ref ref="FILE" />
+	</logger>
+
+	
+
+</configuration>
