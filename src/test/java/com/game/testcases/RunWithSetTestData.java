@@ -15,7 +15,7 @@ public class RunWithSetTestData extends BaseTestApplication {
 	
 	static final Logger log = LoggerFactory.getLogger(RunWithSetTestData.class);
 	
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void verifyPageElementPresence() {
 
 		Assert.assertTrue((driver.getTitle()).equals(ElementConfig
@@ -34,7 +34,7 @@ public class RunWithSetTestData extends BaseTestApplication {
 
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void spinDecrementsBalance() {
 		driver.findElement(By.id(ElementConfig.getProperty("setTestDataInputBox")))
 				.clear();
@@ -48,7 +48,7 @@ public class RunWithSetTestData extends BaseTestApplication {
 
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	public void spinUpdatesSlotTable() {
 		// verifying slot table numbers are updated on clicking spin
 		spin();
@@ -61,7 +61,7 @@ public class RunWithSetTestData extends BaseTestApplication {
 
 	}
 
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void clickUntilWin() {
 
 		// capturing initial balance
@@ -78,7 +78,7 @@ public class RunWithSetTestData extends BaseTestApplication {
 
 	}
 
-	@Test(dataProvider = "paytable", priority = 5, enabled = false)
+	@Test(dataProvider = "paytable", priority = 5, enabled = true)
 	public void setDataWin(String combination, int win,String winCss) {
 
 
@@ -153,7 +153,7 @@ public class RunWithSetTestData extends BaseTestApplication {
 	}
 	
 	
-	@Test(priority = 6,dataProvider = "paytable", enabled = true, alwaysRun=true)
+	@Test(priority = 6,dataProvider = "paytable",dependsOnMethods={"setDataWin"}, enabled = true, alwaysRun=true)
 	public void paytableWinHighlight(String combination, int win,String winCss) {
 		driver.navigate().refresh();
 
